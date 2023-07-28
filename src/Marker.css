@@ -1,0 +1,7 @@
+.Marker {
+  color: var(--accent-color);
+  grid-column: 1;
+  grid-row: 3;
+  align-self: flex-end;
+  cursor: pointer;
+}

@@ -1,15 +1,18 @@
 import "./SequenceCard.css"
 import Marker from "./Marker"
-import Info from "./Info"
+import Number from "./Number"
+import Title from "./Title"
+import Summary from "./Summary"
+import Edit from "./Edit"
 
 export default function SequenceCard(){
   return (
     <section className="sequenceCard">
       <Marker />
-      <Info />
-      <input type="text" placeholder="Home sweet home" maxLength="30"></input>
-      <textarea placeholder="Dorothy is in Kansas"></textarea>
-      <p>1</p>
+      <Number />
+      <Edit />
+      <Summary />
+      <Title />
     </section>
   )
 }

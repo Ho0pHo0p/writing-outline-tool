@@ -1,0 +1,7 @@
+.Edit{
+  color: var(--main-color);
+  grid-row: 1;
+  grid-column: 5;
+  justify-self: last baseline;
+  cursor: pointer;
+}
