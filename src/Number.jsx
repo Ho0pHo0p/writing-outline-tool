@@ -1,11 +1,9 @@
 import "./Number.css"
 
-export default function Number(){
-  const number = 1
-
+export default function Number({num}){
   return(
     <>
-      <button className="Number">{number}</button>
+      <button className="Number">{num}</button>
     </>
   )
 }

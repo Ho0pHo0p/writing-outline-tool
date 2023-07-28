@@ -1,0 +1,8 @@
+.Marker {
+  position: relative;
+  color: var(--accent-color);
+  grid-column: 5;
+  grid-row: 1;
+  align-self: flex-start;
+  justify-self: last baseline;
+}

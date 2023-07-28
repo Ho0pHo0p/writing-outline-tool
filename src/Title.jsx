@@ -1,5 +1,10 @@
-export default function Title(){
+
+export default function Title({title
+, placeholder='Title'}){
+
   return(
-    <input type="text" placeholder="Home sweet home" maxLength="30"></input>
+    <>
+      <input defaultValue={title} placeholder={placeholder}></input>
+    </>
   )
 }

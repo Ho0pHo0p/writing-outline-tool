@@ -1,5 +1,5 @@
-export default function Summary(){
+export default function Summary({summary, placeholder='Summary'}){
   return(
-    <textarea placeholder="Dorothy is in Kansas"></textarea>
+    <textarea placeholder={placeholder} defaultValue={summary}></textarea>
   )
 }
