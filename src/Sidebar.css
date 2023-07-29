@@ -1,6 +1,7 @@
 .Sidebar {
   background-color: var(--accent-color2);
-  padding: 20px;
+  padding: 15px;
+  padding-top: 30px;
   color: var(--accent-color);
   display: flex;
   flex-flow: column;

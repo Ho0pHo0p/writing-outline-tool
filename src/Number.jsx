@@ -1,9 +1,9 @@
 import "./Number.css"
 
-export default function Number({num}){
+export default function Number({num, toggleSample, style}){
   return(
     <>
-      <button className="Number">{num}</button>
+      <button className="Number" onClick={toggleSample} style={style}>{num}</button>
     </>
   )
 }

@@ -3,8 +3,6 @@
 
 #root {
   width: 100%;
-  display: flex;
-  flex-flow: column;
   font-size: 17px;
   box-sizing: border-box;
 }

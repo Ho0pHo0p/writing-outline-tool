@@ -1,10 +1,10 @@
 
-export default function Title({title
-, placeholder='Title'}){
+export default function Title({updateTitle, title
+, placeholder='Title', style}){
 
   return(
     <>
-      <input defaultValue={title} placeholder={placeholder}></input>
+      <input value={title} placeholder={placeholder}style={style} onChange={updateTitle}></input>
     </>
   )
 }
