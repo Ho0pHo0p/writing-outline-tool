@@ -4,7 +4,7 @@ import Number from "./Number"
 import Title from "./Title"
 import Summary from "./Summary"
 import Edit from "./Edit"
-import { useState } from 'react'
+import { useState } from "react"
 import PlotMarkerAlert from "./PlotMarkerAlert"
 
 export default function SequenceCard({seq}){

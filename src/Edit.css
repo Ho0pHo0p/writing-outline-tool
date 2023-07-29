@@ -1,8 +1,11 @@
 .Edit{
-  color: var(--main-color);
+  color: var(--main-bg);
+  background-color: transparent;
+  padding: 0px 5px;
+  font-size: 1.5rem;
+  border-radius: 6px;
   grid-row: 3;
-  grid-column: 1;
-  justify-self: last baseline;
-  align-self: last baseline;
+  grid-column: 5;
   cursor: pointer;
+  justify-self: flex-start;
 }

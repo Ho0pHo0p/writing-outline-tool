@@ -1,9 +1,9 @@
 .sequences {
-  margin: 2rem;
-  display: flex;
-  flex-flow: column wrap;
-  gap: 17px;
+  flex-shrink: 1;
+  width: 100%;
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
 }
-
-/* grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr); */

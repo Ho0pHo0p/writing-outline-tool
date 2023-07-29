@@ -1,31 +1,30 @@
 .sequenceCard {
   background-color: var(--second-bg);
   border-radius: 10px;
-  padding: 17px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: 20px repeat(3, 1fr) 20px;
-  grid-template-rows: 1fr 2fr 25px;
+  grid-template-columns: 30px repeat(3, 1fr) 30px;
+  grid-template-rows: 1fr 2fr .5fr;
   gap: 5px 10px;
 }
 
 .sequenceCard input {
   background-color: var(--second-bg);
-  padding: 0px 5px;
-  text-align: left;
+  padding: 5px 5px;
+  text-align: center;
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: 400;
   font-style:italic;
   border: none;
   outline: none;
-  width: 100%;
-  grid-column: 1 / span 4;
+  grid-column: 2 / span 3;
   grid-row: 1;
+  align-self: center;
 }
 
 .sequenceCard textarea {
   background-color: var(--second-bg);
-  padding: 0px 5px;
   font-family: inherit;
   font-weight: 400;
   font-size: 1rem;
@@ -33,7 +32,7 @@
   width: 100%;
   resize: none;
   outline: none;
-  grid-column: 1 / span 4;
+  grid-column: 2 / 5;
   grid-row: 2;
 }
 

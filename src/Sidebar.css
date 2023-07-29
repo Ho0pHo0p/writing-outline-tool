@@ -1,0 +1,7 @@
+.Sidebar {
+  background-color: var(--accent-color2);
+  padding: 20px;
+  color: var(--accent-color);
+  display: flex;
+  flex-flow: column;
+}

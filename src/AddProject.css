@@ -1,0 +1,21 @@
+.AddProject{
+  display: flex;
+  background-color: var(--second-bg);
+  border-radius: 10px;
+}
+
+.AddProject input {
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--accent-color2);
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.AddProject button {
+  border-radius: 0px 10px 10px 0px;
+  background-color: var(--accent-color);
+  color: var(--main-bg);
+  font-size: 1rem;
+}

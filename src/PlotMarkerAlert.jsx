@@ -2,8 +2,8 @@ import "./PlotMarkerAlert.css"
 
 export default function PlotMarkerAlert({message}){
   return(
-    <span className="PlotMarkerAlert">
+    <div className="PlotMarkerAlert">
       <p>{message}</p>
-    </span>
+    </div>
   )
 }

@@ -1,12 +1,11 @@
 .Number {
   background-color: transparent;
-  color: var(--main-color);
-  font: inherit;
-  font-weight: 700;
+  color: var(--accent-color);
   padding: 5px;
+  font-size: 24px;
+  font-weight: 700;
   outline: none;
   border: none;
   grid-column: 5;
-  grid-row: 3;
-  justify-self: last baseline;
+  grid-row: 1;
 }
