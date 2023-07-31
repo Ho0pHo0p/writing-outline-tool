@@ -1,9 +1,14 @@
 .sequences {
   width: 100%;
-  margin: 3rem;
+  margin: 2rem;
   margin-top: 0px;
+}
+
+.sequences form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 40px repeat(4, 1fr);
+  grid-template-rows: 60px repeat(4, 1fr);
   gap: 20px;
+  grid-column:1 /span 2;
+  grid-row: 1;
 }

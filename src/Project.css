@@ -1,0 +1,12 @@
+.Project {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.Project li:hover {
+ text-decoration: underline;
+} 
+
+.Project li {
+  padding: 5px;
+}

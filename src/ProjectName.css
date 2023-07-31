@@ -1,19 +1,18 @@
 .ProjectName {
-  color: var(--accent-color);
+  color: var(--second-bg);
   grid-row: 1;
-  grid-column: 1 / span 2;
-  margin: 5px;
+  grid-column: 1;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .ProjectName a {
-  color: var(--accent-color);
-  font-size: 1rem;
   text-decoration: underline;
   background-color: transparent;
 }
 
 .ProjectName h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   width: fit-content;
 }
