@@ -1,11 +1,11 @@
 import { compareNums } from "./utils"
-export default function Title({placeholder='Title', style, updateTitle, num, updateSeq, title1, title2, title3, title4, title5, title6, title7, title8}){
-
+export default function Title({placeholder='Title', style, handleChange, id, currentProject}){
+  console.log(id)
+  console.log(`sequence${id}-${currentProject.id}`)
   return(
     <>
-      <input placeholder={placeholder} style={style} onChange={ e => {updateTitle(e,num)}} onBlur={e => {
-        updateSeq(e, title1, title2, title3, title4, title5, title6, title7, title8)
-      }} value={compareNums(num, title1, title2, title3, title4, title5, title6, title7, title8)}></input>
+      <label htmlFor={`sequence${id}-${currentProject.id}`}></label>
+      <input onChange={handleChange} name="title" id={`sequence${id}-${currentProject.project}`} type="text" placeholder={placeholder} style={style} ></input>
     </>
   )
 }

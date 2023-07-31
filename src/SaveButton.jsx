@@ -1,11 +1,11 @@
 import "./SaveButton.css"
 
-export default function SaveButton({updateSeq}){
+export default function SaveButton({updateProject, save}){
   return(
     <div  className="SaveButton">
       <button onClick={e=>{
         e.preventDefault();
-        updateSeq(e, num)
+        save()
       }}>Save</button>
     </div>
   )

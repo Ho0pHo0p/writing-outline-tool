@@ -1,9 +1,9 @@
 import "./ProjectName.css"
 
-export default function ProjectName({selectedProject}) {
+export default function ProjectName({currentProject}) {
   return(
     <div className="ProjectName">
-      <a><h2>{selectedProject}</h2></a>
+      <a><h2>{currentProject.project}</h2></a>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import Project from "./Project"
 import "./Menu.css"
 
-export default function Menu ({projectList, updateSelectedProj, selectedProject}){
+export default function Menu ({projects, updateProject, currentProject, }){
   return(
     <ul className="Menu">
-      {projectList.map((p) => (
-        <Project key={p.id} project={p} updateSelectedProj={updateSelectedProj} selectedProject={selectedProject}/>
+      {projects.map((p) => (
+        <Project key={p.id} project={p} currentProject={currentProject} updateProject={updateProject} />
       ))}
     </ul>
   )

@@ -1,9 +1,10 @@
 import { compareNums } from "./utils"
 
-export default function Summary({summary, placeholder='And then a surprising turn of events...', style, updateSummary, num, updateSeq, summary1, summary2, summary3, summary4, summary5, summary6, summary7, summary8}){
+export default function Summary({ placeholder='And then a surprising turn of events...', style, handleChange, id, currentProject }){
   return(
-    <textarea placeholder={placeholder} value={compareNums(num, summary1, summary2, summary3, summary4, summary5, summary6, summary7, summary8)} style={style} onChange={e =>{
-      updateSummary(e,num)
-    }} onBlur={updateSeq} ></textarea>
+    <>
+      <label htmlFor={`sequence${id}-${currentProject.id}`}></label>
+      <textarea name="summary"  id={`sequence${id}-${currentProject.id}`} onChange={handleChange} placeholder={placeholder} style={style} ></textarea>
+    </>
   )
 }

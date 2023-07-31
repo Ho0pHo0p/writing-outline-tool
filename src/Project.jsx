@@ -1,14 +1,17 @@
-import SequencesMenu from "./SequencesMenu"
 import "./Project.css"
 
-export default function Project({project, updateSelectedProj, selectedProject}){
+export default function Project({currentProject, project, updateProject}){
+  const style = {color: 'var(--second-bg)'}
   const defaultStyle = {color: 'var(--accent-color)'}
-  const clickStyle = {color: 'var(--second-bg)'}
+
+  const handleClick = (e) => {
+    updateProject(project)
+  }
+
   return(
-    <a className="Project">
-      <li style={selectedProject === project.project?clickStyle : defaultStyle} onClick={updateSelectedProj}>
+    <a className="Project" >
+      <li onClick={handleClick} style={project.id === currentProject.id ? style : defaultStyle}>
         {project.project}
-        <SequencesMenu />
       </li>
     </a>
   )
