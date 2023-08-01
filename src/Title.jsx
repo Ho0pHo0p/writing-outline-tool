@@ -1,11 +1,13 @@
 import { compareNums } from "./utils"
-export default function Title({placeholder='Title', style, handleChange, id, currentProject}){
-  console.log(id)
-  console.log(`sequence${id}-${currentProject.id}`)
+export default function Title({placeholder='Title', style, handleChange, num, currentProject, formData, save, seq}){
+  const valueObject = formData.filter((s)=> s.seqNum === num);
+  const value = valueObject.title
+
   return(
     <>
-      <label htmlFor={`sequence${id}-${currentProject.id}`}></label>
-      <input onChange={handleChange} name="title" id={`sequence${id}-${currentProject.project}`} type="text" placeholder={placeholder} style={style} ></input>
+      <label htmlFor={`sequence${num}-${currentProject.id}-title`}></label>
+      <input onChange={e=>{ 
+        handleChange(e, num, currentProject);}} name="title" id={`sequence${num}-${currentProject.id}`} type="text" placeholder={placeholder} style={style} value={value} ></input>
     </>
   )
 }

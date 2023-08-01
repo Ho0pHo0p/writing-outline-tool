@@ -1,10 +1,13 @@
 import { compareNums } from "./utils"
 
-export default function Summary({ placeholder='And then a surprising turn of events...', style, handleChange, id, currentProject }){
+export default function Summary({ placeholder='And then a surprising turn of events...', style, handleChange, num, currentProject, formData }){
+  const valueObject = formData.filter((s)=> s.seqNum === num);
+  const value = valueObject.summary
+
   return(
     <>
-      <label htmlFor={`sequence${id}-${currentProject.id}`}></label>
-      <textarea name="summary"  id={`sequence${id}-${currentProject.id}`} onChange={handleChange} placeholder={placeholder} style={style} ></textarea>
+      <label htmlFor={`sequence${num}-${currentProject.id}-summary`}></label>
+      <textarea name="summary"  id={`sequence${num}-${currentProject.id}`} onChange={e=>{handleChange(e, num, currentProject)}} placeholder={placeholder} style={style} value={value}></textarea>
     </>
   )
 }

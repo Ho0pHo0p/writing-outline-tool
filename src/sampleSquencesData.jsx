@@ -20,7 +20,7 @@ const sampleSequencesArray = [
     seq: 4, 
     title: 'Sequence Four',
     summary: 'Some might call Sequence Four, along with Sequence Three, the “Fun and Games” of the movie. These two sections deliver on the “Promise of the Premise.” In Sequence Four, the protagonist faces another obstacle or dilemma that comes as a direct result of what happened in Sequence Three. This sequence usually ends with the Midpoint.',
-    markerText: 'The Midpoint occurs at the end of Sequence 3',
+    markerText: 'The Midpoint occurs at the end of Sequence 4',
   },
   {
     seq: 5, 

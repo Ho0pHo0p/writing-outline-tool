@@ -5,11 +5,11 @@ import { v4 as uuid } from 'uuid'
 import { useState } from "react"
 import { sequenceArray } from "./sequenceData"
 
-export default function AddProject({placeholder, addProject, updatePage, page, updateProject}){
+export default function AddProject({placeholder, addProject, updatePage, page, updateProject, resetSequence, seqData}){
   const [formData, setFormData] = useState({
     project: "",
     id: "",
-    sequences: sequenceArray
+    sequences: [...sequenceArray]
   })
 
   const handleChange = (e) => {
@@ -23,9 +23,10 @@ export default function AddProject({placeholder, addProject, updatePage, page, u
   }
 
   const handleSubmit = () => {
+    resetSequence()
     addProject(formData);
     updateProject(formData);
-    setFormData({project:"", id:"", sequences: sequenceArray});
+    setFormData({project:"", id:"", sequences: seqData});
     if(page ==='home'){
       updatePage();
     }

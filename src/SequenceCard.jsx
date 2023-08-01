@@ -11,7 +11,7 @@ import { useState } from "react"
 import PlotMarkerAlert from "./PlotMarkerAlert"
 
 
-export default function SequenceCard({seq, handleChange, currentProject}){
+export default function SequenceCard({seq, handleChange, currentProject, addProject, seqData, save }){
   const [marker, setMarker] = useState(false);
   const [sample, setSample] = useState(false);
   const toggleMarker = (marker) => {
@@ -38,16 +38,18 @@ export default function SequenceCard({seq, handleChange, currentProject}){
   
 
   return (
-    <section className="sequenceCard" style={sample? sampleStyle : defaultStyle}>
+    <section className={`sequenceCard sequenceCard${seq.seqNum}`} style={sample? sampleStyle : defaultStyle}>
       {sample? <PlotMarker plotMarker={seq.marker} toggleMarker={toggleMarker} style={sampleStyle} /> : <PlotMarker plotMarker={seq.marker} toggleMarker={toggleMarker}/>}
 
       {marker && <PlotMarkerAlert message={sampleText.markerText} />}
 
       {sample? <Number num={seq.seqNum} toggleSample={toggleSample} style={sampleStyle}/> : <Number num={seq.seqNum} toggleSample={toggleSample} />}
-      <Edit />
-      {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} id={seq.seqNum} currentProject={currentProject}/>}
 
-      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleChange={handleChange} id={seq.seqNum} currentProject={currentProject} />}
+      <Edit />
+
+      {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} num={seq.seqNum} currentProject={currentProject} addProject={addProject} formData={seqData}  save={save} />}
+
+      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleChange={handleChange} num={seq.seqNum} currentProject={currentProject} addProject={addProject} formData={seqData} save={save} seq={seq}/>}
     </section>
   )
 }
