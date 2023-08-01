@@ -41,17 +41,10 @@ export default function Body(){
     setSeqFormData(currData => {
       const editedSeq = currData.filter((s) => s.seqNum === num)[0]; 
       const filtered = currData.filter((s) => s.id !== editedSeq.id);
-      console.log(filtered)
       return [
          ...filtered, 
         {...editedSeq, [e.target.name]: e.target.value}
       ]
-    })
-
-    setProjects(currProjects => {
-      const filteredProjects = currProjects.filter((p) => p.id !== project.id)
-      console.log(filteredProjects)
-      return [...filteredProjects, {...project, sequences:[...seqFormData]}]
     })
   }
 
@@ -63,12 +56,23 @@ export default function Body(){
     setSeqFormData(currentProject.sequences)
   }
 
+  const autoSave = (project) => {
+    setProjects(currProjects => {
+      const filteredProjects = currProjects.filter((p) => p.id !== project.id)
+      console.log(filteredProjects)
+      
+      return [...filteredProjects, {...project, sequences:[...seqFormData]}]
+    })
+
+    setCurrentProject({...project})
+  }
+
   return(
     <section className="Body">
       {page === 'home' && <Home updatePage={updatePageSequences} addProject={addProject} page={page} updateProject={updateCurrentProject} seqData={seqFormData} resetSequence={resetSequence}/>}
-      {page === 'sequences' && <Sidebar  addProject={addProject} projects={projects} updateProject={updateCurrentProject} currentProject={currentProject} resetSequence={resetSequence} displaySequences={sequenceDisplayForProject}/>}
-      {page === 'sequences' && <Sequences  currentProject={currentProject} addProject={addProject} save={saveProjectData} handleChange={handleSequenceChange} seqData={seqFormData} />}
-      {page === 'scenes' && <Sidebar />}
+      {/* {page === 'sequences' && <Sidebar  addProject={addProject} projects={projects} updateProject={updateCurrentProject} currentProject={currentProject} resetSequence={resetSequence} displaySequences={sequenceDisplayForProject} />} */}
+      {page === 'sequences' && <Sequences  currentProject={currentProject} addProject={addProject} save={autoSave} handleChange={handleSequenceChange} seqData={seqFormData} />}
+      {/* {page === 'scenes' && <Sidebar />} */}
       {page === 'scenes' && <Scenes />}
     </section>
   )

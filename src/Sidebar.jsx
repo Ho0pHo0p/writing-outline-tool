@@ -6,7 +6,7 @@ export default function Sidebar({projects, addProject, updateProject, currentPro
   return(
     <aside className="Sidebar">
       <AddProject  addProject={addProject} placeholder={"Add New Project"} updateProject={updateProject} seqData={seqData} resetSequence={resetSequence}/>
-      <Menu projects={projects} updateProject={updateProject} currentProject={currentProject} resetSequence={resetSequence} displaySequences={displaySequences}/>
+      <Menu projects={projects} updateProject={updateProject} currentProject={currentProject} resetSequence={resetSequence} displaySequences={displaySequences} />
     </aside>
   ) 
 }

@@ -1,13 +1,12 @@
 import "./Project.css"
 
-export default function Project({currentProject, project, updateProject, displaySequences}){
+export default function Project({currentProject, project, updateProject, displaySequences, resetSequence}){
   const style = {color: 'var(--second-bg)'}
   const defaultStyle = {color: 'var(--accent-color)'}
 
   const handleClick = () => {
     updateProject(project);
-    console.log(currentProject)
-    displaySequences();
+    resetSequence()
   }
 
   return(

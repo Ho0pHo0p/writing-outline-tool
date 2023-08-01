@@ -49,7 +49,7 @@ export default function SequenceCard({seq, handleChange, currentProject, addProj
 
       {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} num={seq.seqNum} currentProject={currentProject} addProject={addProject} formData={seqData}  save={save} />}
 
-      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleChange={handleChange} num={seq.seqNum} currentProject={currentProject} addProject={addProject} formData={seqData} save={save} seq={seq}/>}
+      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleSeq={handleChange} num={seq.seqNum} currentProject={currentProject} addProject={addProject} formData={seqData} save={save} seq={seq}/>}
     </section>
   )
 }

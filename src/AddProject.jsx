@@ -26,7 +26,7 @@ export default function AddProject({placeholder, addProject, updatePage, page, u
     resetSequence()
     addProject(formData);
     updateProject(formData);
-    setFormData({project:"", id:"", sequences: seqData});
+    setFormData({project:"", id:"", sequences: [...sequenceArray]});
     if(page ==='home'){
       updatePage();
     }
