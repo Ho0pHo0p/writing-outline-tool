@@ -1,0 +1,10 @@
+.Scenes {
+  background-color: var(--accent-color2);
+  grid-row: 3;
+  grid-column: 1 / span 3;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}

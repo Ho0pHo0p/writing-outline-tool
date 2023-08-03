@@ -1,0 +1,31 @@
+.SceneCard {
+  background-color: var(--second-bg);
+  height: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  grid-template-rows: 25px 20px 2fr;
+  align-items: baseline;
+  gap:10px;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+
+.SceneCard h3 {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  margin: 10px;
+}
+
+#sceneNumber {
+  grid-row: 1;
+  margin:10px;
+  font-weight: 600;
+}
+
+#sceneSummary {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  margin: 10px;
+}

@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid'
 import { useState } from "react"
 import { sequenceArray } from "./sequenceData"
 
-export default function AddProject({placeholder, addProject, updatePage, page, updateProject, resetSequence, seqData}){
+export default function AddProject({placeholder, updatePage, updateProject}){
   const [formData, setFormData] = useState({
     project: "",
     id: "",
@@ -22,21 +22,15 @@ export default function AddProject({placeholder, addProject, updatePage, page, u
     })
   }
 
-  const handleSubmit = () => {
-    resetSequence()
-    addProject(formData);
+  const handleSubmit = (e) => {
+    e.preventDefault
     updateProject(formData);
     setFormData({project:"", id:"", sequences: [...sequenceArray]});
-    if(page ==='home'){
-      updatePage();
-    }
+    updatePage();
   }
 
   return(
-    <form className="AddProject" onSubmit={e => {
-      e.preventDefault();
-      handleSubmit();
-      }}>
+    <form className="AddProject" onSubmit={handleSubmit}>
       <label htmlFor="project"></label>
       <input 
         type="text" 
@@ -45,6 +39,7 @@ export default function AddProject({placeholder, addProject, updatePage, page, u
         id="project"
         onChange={handleChange}
         value={formData.project}
+        required
       ></input>
       <button><FontAwesomeIcon icon={faPenFancy} /></button>
     </form>

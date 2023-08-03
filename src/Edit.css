@@ -1,11 +1,31 @@
 .Edit{
+  position: relative;
   color: var(--main-bg);
   background-color: transparent;
-  padding: 0px 5px;
+  padding: 5px 5px 5px 5px;
   font-size: 1.5rem;
   border-radius: 6px;
   grid-row: 3;
   grid-column: 5;
   cursor: pointer;
   justify-self: flex-start;
+}
+
+/* .Edit div {
+  position: relative;
+  grid-column: 2 / span 4;
+  grid-row: 2;
+  background-color: var(--main-bg);
+} */
+
+.Edit p {
+  position: absolute;
+  width: 100px;
+  left: -120px;
+  top: -22px;
+  padding: 10px;
+  padding-right: 55px;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
 }

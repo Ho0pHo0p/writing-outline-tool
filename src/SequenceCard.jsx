@@ -11,9 +11,30 @@ import { useState } from "react"
 import PlotMarkerAlert from "./PlotMarkerAlert"
 
 
-export default function SequenceCard({seq, handleChange, currentProject, addProject, seqData, save }){
+export default function SequenceCard({seq, num, handleChange, project, data, updatePage, updateSeq, updateData}){
+
   const [marker, setMarker] = useState(false);
   const [sample, setSample] = useState(false);
+
+  const sequenceDataTitle = (() => {
+    for(let s of data){
+      if(s.id === seq.id){
+        const textData= s[num];
+        return textData.title
+      }
+    }
+  })();
+
+  const sequenceDataSummary= (() => {
+    for(let s of data){
+      if(s.id === seq.id){
+        const textData= s[num];
+        return textData.summary
+      }
+    }
+  })();
+
+
   const toggleMarker = (marker) => {
     setMarker(prevMarker => {
     return !prevMarker
@@ -35,7 +56,6 @@ export default function SequenceCard({seq, handleChange, currentProject, addProj
     backgroundColor: 'var(--second-bg)',
     color: 'var(--main-bg)'
   }
-  
 
   return (
     <section className={`sequenceCard sequenceCard${seq.seqNum}`} style={sample? sampleStyle : defaultStyle}>
@@ -43,13 +63,13 @@ export default function SequenceCard({seq, handleChange, currentProject, addProj
 
       {marker && <PlotMarkerAlert message={sampleText.markerText} />}
 
-      {sample? <Number num={seq.seqNum} toggleSample={toggleSample} style={sampleStyle}/> : <Number num={seq.seqNum} toggleSample={toggleSample} />}
+      {sample? <Number num={num} toggleSample={toggleSample} style={sampleStyle}/> : <Number num={num} toggleSample={toggleSample} />}
 
-      <Edit />
+      <Edit updatePage={updatePage} updateSeq={updateSeq} data={data} id={seq.id}/>
 
-      {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} num={seq.seqNum} currentProject={currentProject} addProject={addProject} formData={seqData}  save={save} />}
+      {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} num={num} project={project} data={sequenceDataSummary} />}
 
-      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleSeq={handleChange} num={seq.seqNum} currentProject={currentProject} addProject={addProject} formData={seqData} save={save} seq={seq}/>}
+      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleChange={handleChange} num={num} data={sequenceDataTitle} project={project} />}
     </section>
   )
 }

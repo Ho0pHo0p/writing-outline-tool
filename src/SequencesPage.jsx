@@ -3,17 +3,31 @@ import "./SequencesPage.css"
 import ProjectName from "./ProjectName";
 import SaveButton from "./SaveButton";
 import { useState } from "react"
+import { filterArray, filterSegment } from "./utils";
+import { sequenceArray } from "./sequenceData";
 
 
-export default function Sequences({currentProject, addProject, save, handleChange, seqData}){
+export default function Sequences({project, updatePage, save, updateSeq}){
+  const [formData, setFormData] = useState([...sequenceArray])
+  const seqData = project.sequences;
+
   
+  const handleChange = (e, num) => {
+    setFormData(currentData => {
+      const sequence = filterSegment(currentData, num);
+      const text = sequence[num]
+      const filteredData = filterArray(currentData, num);
+      return [...filteredData, {...sequence, [num]: {...text, [e.target.name]: e.target.value}}]
+    })
+  }
+
   return(
     <main className="sequences">
       <form>
-        <ProjectName currentProject={currentProject}/>
-          <SaveButton />
+        <ProjectName project={project} on={false}/>
+          <SaveButton save={save} data={formData}/>
           {seqData.map((s) => (
-            <SequenceCard key={s.id} seq={s} handleChange={handleChange} currentProject={currentProject} addProject={addProject} seqData={seqData} save={save}/>
+            <SequenceCard key={s.id} num={s.seqNum} seq={s} handleChange={handleChange} project={project} data={formData} updatePage={updatePage} updateSeq={updateSeq} />
           ))}
       </form>
     </main>

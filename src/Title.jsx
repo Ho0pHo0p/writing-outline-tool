@@ -1,26 +1,11 @@
 
-export default function Title({placeholder='Title', style, handleSeq, num, currentProject, formData, save, seq}){
-  const valueObject = formData.filter((s)=> s.seqNum === num)[0];
-  let value = valueObject.title
-  const seqs = currentProject.sequences;
-  const thisSeq = seqs.filter((s) => s.seqNum === num)[0]
-
-  const handleChange = (e) => {
-    handleSeq(e, num, currentProject)
-  }
-
-  const handleSave = () => {
-    save(currentProject)
-  }
-
-  const findValue = () => {
-   console.log(value)
-  }
+export default function Title({placeholder='Title', style, num, project, handleChange, data}){
 
   return(
     <>
-      <label htmlFor={`sequence${num}-${currentProject.id}-title`}></label>
-      <input onChange={handleChange} onBlur={handleSave}name="title" id={`sequence${num}-${currentProject.id}`} type="text" placeholder={placeholder} defaultValue={seq.title} style={style} value={value} >
+      <label htmlFor={`sequence${num}-${project.id}-title`}></label>
+      <input onChange={ e=>{ handleChange(e, num) 
+      }}  name='title' id={`sequence${num}-${project.id}`} type="text" placeholder={placeholder} style={style} value={data}>
       </input>
     </>
   )

@@ -51,6 +51,7 @@
   outline: none;
   grid-column: 1 / 6;
   grid-row: 2;
+  height: 400px;
 }
 
 .sequenceCard textarea {

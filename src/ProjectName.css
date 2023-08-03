@@ -4,15 +4,23 @@
   grid-column: 1;
   margin-left: 10px;
   margin-bottom: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
 }
 
 .ProjectName a {
-  text-decoration: underline;
   background-color: transparent;
+  text-decoration: underline;
 }
 
 .ProjectName h2 {
   font-size: 1.5rem;
   cursor: pointer;
   width: fit-content;
+}
+.ProjectName h3 {
+  font-size: 1.5rem;
+  width: fit-content;
+  font-weight: 400;
 }
