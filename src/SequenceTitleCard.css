@@ -6,24 +6,29 @@
   width: 90%;
   justify-self: center;
   border-radius: 10px;
-  padding: 10px;
-  display: grid; 
-  grid-column: .15fr 1fr .15fr;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  word-wrap: break-word;
 }
 
 .SequenceTitleCard h2 {
   align-self: center;
-  grid-column: 2;
+  padding: 0px;
+  margin: 10px;
+  font-style: italic;
+
 }
 
 .SequenceTitleCard p {
   width: 100%;
-  grid-column: 1 / span 2;
-  padding: 0px 10px 0px 10px
+  grid-column: 2;
+  grid-row: 3;
+  margin: 10px;
+  text-align: center;
 }
 
 .chevron {
-  grid-column: 1;
-  grid-row: 1;
+  position: absolute;
   padding: 10px;
 }

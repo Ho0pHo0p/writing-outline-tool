@@ -14,6 +14,7 @@ export default function Edit({updatePage, updateSeq, data, id}){
     <button className="Edit" onClick={e=> {
       updateSeq(updatedSequence)
       updatePage()
+      
     }}>
       <FontAwesomeIcon icon={faPenFancy} />
     </button>

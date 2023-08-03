@@ -8,4 +8,5 @@
   border: none;
   grid-column: 5;
   grid-row: 1;
+  align-self: center;
 }

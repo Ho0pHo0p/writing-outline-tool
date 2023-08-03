@@ -5,6 +5,15 @@
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+ grid-template-rows: 5px 1fr;
   gap: 15px;
   padding: 20px;
+  margin-top: 25px;
+}
+
+.Scenes .filter {
+  position: relative;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  justify-self: end;
 }

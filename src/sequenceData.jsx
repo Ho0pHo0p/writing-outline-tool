@@ -13,6 +13,7 @@ const sequenceArray = [
     markerOn: false,
     placeHoldSum:'Dorothy is on the farm in Kansas when...', 
     placeHoldTitle: 'No Place Like Home',
+    scenes: []
   },
   {
     id: uuid(),
@@ -24,6 +25,7 @@ const sequenceArray = [
     numWritten: 'two',
     marker: true,
     markerOn: false,
+    scenes: []
   },
   {
     id: uuid(),
@@ -35,6 +37,7 @@ const sequenceArray = [
     numWritten: 'three',
     marker: false,
     markerOn: false,
+    scenes: []
   },
   {
     id: uuid(),
@@ -46,6 +49,7 @@ const sequenceArray = [
     numWritten: 'four',
     marker: true,
     markerOn: false,
+    scenes: []
   },
   {
     id: uuid(),
@@ -57,6 +61,7 @@ const sequenceArray = [
     numWritten: 'five',
     marker: false,
     markerOn: false,
+    scenes: []
   },
   {
     id: uuid(),
@@ -68,6 +73,7 @@ const sequenceArray = [
     numWritten: 'six',
     marker: true,
     markerOn: false,
+    scenes: []
   },
   {
     id: uuid(),
@@ -79,6 +85,7 @@ const sequenceArray = [
     numWritten: 'seven',
     marker: true,
     markerOn: false,
+    scenes: []
   },
   {
     id: uuid(),
@@ -90,6 +97,7 @@ const sequenceArray = [
     numWritten: 'eight',
     marker: false,
     markerOn: false,
+    scenes: []
   }
 ]
 

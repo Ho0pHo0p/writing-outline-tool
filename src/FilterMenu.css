@@ -1,0 +1,15 @@
+.FilterMenu {
+  position: absolute;
+  background-color: transparent;
+  width: 50px;
+  border-radius: 10px;
+  left: -40px;
+  top: -15px;
+
+}
+
+.FilterMenu button {
+  color: var(--accent-color);
+  background-color: transparent;
+  padding: 5px;
+}

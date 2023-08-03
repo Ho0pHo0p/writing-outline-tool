@@ -1,6 +1,6 @@
 import "./SceneCard.css"
 
-export default function SceneCard({scene}){
+export default function SceneCard({scene, addScene}){
   return(
     <div className="SceneCard">
       <p id="sceneNumber">{scene.number}</p>

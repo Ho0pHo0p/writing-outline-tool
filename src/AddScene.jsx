@@ -2,12 +2,15 @@ import "./AddScene.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
+import { v4 as uuid } from "uuid"
 
-export default function AddScene({updateScenes}){
+
+export default function AddScene({updateScenes, addScene, sceneData}){
   const [formData, setFormData] = useState({
     number: 1,
     slugline: "",
-    summary: ""
+    summary: "", 
+    id: uuid()
   })
 
   const handleChange = (e) => {
@@ -22,16 +25,19 @@ export default function AddScene({updateScenes}){
       return {
         number: prevFormData.number + 1,
         slugline: "",
-        summary: ""
+        summary: "",
+        id: uuid()
       }
     })
+  
   }
+
 
   return(
     <form className="AddScene" onSubmit={e=> {
       handleSubmit(e)
       updateScenes(formData)
-      }}>
+      }} onBlur={e=> {addScene(sceneData)}}>
       <label htmlFor="number"></label>
       <input onChange={handleChange} id="number" placeholder="1" type="number" name="number" value={formData.number}  ></input>
       <label htmlFor="slugline"></label>

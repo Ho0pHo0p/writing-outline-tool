@@ -8,7 +8,7 @@ import { sequenceArray } from "./sequenceData";
 
 
 export default function Sequences({project, updatePage, save, updateSeq}){
-  const [formData, setFormData] = useState([...sequenceArray])
+  const [formData, setFormData] = useState(project.sequences)
   const seqData = project.sequences;
 
   
@@ -19,6 +19,7 @@ export default function Sequences({project, updatePage, save, updateSeq}){
       const filteredData = filterArray(currentData, num);
       return [...filteredData, {...sequence, [num]: {...text, [e.target.name]: e.target.value}}]
     })
+    save(formData)
   }
 
   return(
