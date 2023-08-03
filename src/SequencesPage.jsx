@@ -8,10 +8,10 @@ import { sequenceArray } from "./sequenceData";
 
 
 export default function Sequences({project, updatePage, save, updateSeq}){
+
   const [formData, setFormData] = useState(project.sequences)
   const seqData = project.sequences;
 
-  
   const handleChange = (e, num) => {
     setFormData(currentData => {
       const sequence = filterSegment(currentData, num);

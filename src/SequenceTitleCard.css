@@ -2,27 +2,27 @@
   background-color: var(--main-color);
   color: var(--second-bg);
   grid-column: 1 / span 3;
-  max-width: 900px;
-  width: 90%;
+  width: 90vw;
+  height: max-content;
   justify-self: center;
   border-radius: 10px;
-  padding: 15px;
+  padding: 5px;
   display: flex;
   flex-flow: column;
   word-wrap: break-word;
+  align-items: center;
 }
 
 .SequenceTitleCard h2 {
   align-self: center;
   padding: 0px;
-  margin: 10px;
+  margin: 0px;
   font-style: italic;
 
 }
 
 .SequenceTitleCard p {
   width: 100%;
-  grid-column: 2;
   grid-row: 3;
   margin: 10px;
   text-align: center;
@@ -30,5 +30,6 @@
 
 .chevron {
   position: absolute;
+  left: 65px;
   padding: 10px;
 }

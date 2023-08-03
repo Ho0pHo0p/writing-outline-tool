@@ -5,7 +5,7 @@
   border-radius: 10px;
   display: grid;
   grid-template-columns: 55px 1fr;
-  grid-template-rows: 25px 20px 2fr;
+  grid-template-rows: 25px 20px 2fr 30px;
   align-items: baseline;
   gap:10px;
   overflow: scroll;
@@ -29,4 +29,12 @@
   grid-row: 3;
   grid-column: 1 / span 2;
   margin: 10px;
+}
+
+#x {
+  grid-column: 1 / span 2;
+  grid-row: 4; 
+  justify-self: right;
+  font-size: 2rem;
+  cursor: pointer;
 }

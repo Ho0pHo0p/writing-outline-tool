@@ -11,7 +11,7 @@ import { useState } from "react"
 import PlotMarkerAlert from "./PlotMarkerAlert"
 
 
-export default function SequenceCard({seq, num, handleChange, project, data, updatePage, updateSeq, updateData}){
+export default function SequenceCard({seq, num, handleChange, project, data, updatePage, updateSeq, updateData, width}){
 
   const [marker, setMarker] = useState(false);
   const [sample, setSample] = useState(false);

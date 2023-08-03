@@ -17,12 +17,23 @@ export default function Scenes({addScene, currentSeq}){
       return [...currData, {...scene}]
     })
   }
+
+  const removeScene = (scene) => {
+    setSceneData(currData => {
+      const filtered = currData.filter((s) => s.id !== scene.id); 
+      return (
+        [...filtered]
+      )
+    })
+  }
+
   const sortDescending = () => {
     setSortUp(false)
   }
   const sortAscending = () => {
     setSortUp(true)
   }
+
 
   return (
     <div className="Scenes">
@@ -32,10 +43,10 @@ export default function Scenes({addScene, currentSeq}){
       <AddScene updateScenes={updateScenes}  addScene={addScene} sceneData={sceneData}/>
       {sortUp ? sceneAscending.map((s) => {
         return(
-        <SceneCard key={s.id} scene={s} />
+        <SceneCard key={s.id} scene={s} remove={removeScene} />
       )}) : sceneDescending.map((s) => {
         return(
-        <SceneCard key={s.id} scene={s} />
+        <SceneCard key={s.id} scene={s} remove={removeScene}/>
       )})}
     </div>
   )

@@ -5,12 +5,11 @@ import Scenes from "./ScenesPage"
 import { useState } from "react"
 import { filterArray } from "./utils"
 
-export default function Body(){
+export default function Body({}){
   const [page, setPage] = useState('home');
   const [project, setProject] = useState({});
   const [projectData, setProjectData] = useState(false);
   const [currentSeq, setCurrentSeq] = useState({});
-
 
   const updatePageSequences = () => {
     setPage('sequences');
