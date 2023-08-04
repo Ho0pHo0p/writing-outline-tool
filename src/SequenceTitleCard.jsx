@@ -12,9 +12,11 @@ export default function SequenceTitleCard ({title, summary}){
 
   return(
     <div onClick={handleClick} className="SequenceTitleCard">
-      <h2>{title}</h2> 
-      {expanded && <p>{summary}</p>}
+      <div>
       {expanded ? <FontAwesomeIcon icon={faChevronUp} className="chevron"/> : <FontAwesomeIcon icon={faChevronDown} className="chevron"/> }
+      <h2>{title}</h2>
+      </div>
+      {expanded && <p>{summary}</p>}
 
     </div>
   )

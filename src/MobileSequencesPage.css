@@ -7,7 +7,7 @@
 .sequencesMobile form {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px repeat(4, 1fr);
+  grid-template-rows: 60px repeat(8, 1fr);
   gap: 20px;
   grid-column:1 /span 2;
   grid-row: 1;
@@ -15,6 +15,7 @@
 
 .sequencesMobile .SaveButton {
   grid-column: 1;
+  grid-row: 1;
 
 }
 
@@ -25,35 +26,39 @@
 
 .sequencesMobile .sequenceCard2 {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 .sequencesMobile .sequenceCard3 {
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 4;
 }
 
 .sequencesMobile .sequenceCard4 {
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 5;
 }
 
 .sequencesMobile .sequenceCard5 {
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 6;
+
 }
 
 .sequencesMobile .sequenceCard6 {
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 7;
+
 }
 
 .sequencesMobile .sequenceCard7 {
   grid-column: 1;
-  grid-row: 5;
+  grid-row: 8;
+
 }
 
 .sequencesMobile .sequenceCard8 {
   grid-column: 1;
-  grid-row: 5;
+  grid-row: 9;
+
 }
