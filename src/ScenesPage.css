@@ -1,10 +1,9 @@
 .ScenesPage {
-  margin: 2rem;
+  margin: auto;
   margin-top: 0px;
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 55px .25fr 3fr;
+  grid-template-rows: 55px .1fr ;
   gap: 15px;
 }
 

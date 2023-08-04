@@ -1,11 +1,13 @@
 import "./Body.css"
 import Sequences from "./SequencesPage"
+import SequencesMobile from "./MobileSequencesPage"
 import Home from "./HomePage"
+import MobileHome from "./MobileHomePage"
 import Scenes from "./ScenesPage"
 import { useState } from "react"
 import { filterArray } from "./utils"
 
-export default function Body({}){
+export default function Body({window}){
   const [page, setPage] = useState('home');
   const [project, setProject] = useState({});
   const [projectData, setProjectData] = useState(false);
@@ -49,14 +51,22 @@ export default function Body({}){
   }
 
 
-
-
-
   return(
     <section className="Body">
-      {page === 'home' && <Home updatePage={updatePageSequences} page={page} updateProject={updateProject} />}
-      {page === 'sequences' && <Sequences project={project} saved={projectData} updatePage={updatePageScenes} save={saveProject} updateSeq={updateCurrentSeq}/>}
-      {page === 'scenes' && <Scenes project={project} s={currentSeq} updatePage={updatePageSequences} text={currentSeq[currentSeq.seqNum]} updateProject={updateProject} addScene={addScenesToSequence} currentSeq={currentSeq} saveProject={saveProject} addSequence={addSequenceToSequences }/>}
+
+        {/* mobile */}
+       {page === 'home' && window < 660 && <MobileHome updatePage={updatePageSequences} page={page} updateProject={updateProject} />}
+
+      {/* desktop */}
+      {page === 'home' && window >= 660 && <Home updatePage={updatePageSequences} page={page} updateProject={updateProject} />}
+      
+      {/* mobile */}
+      {page === 'sequences' && window < 800 && <SequencesMobile project={project} saved={projectData} updatePage={updatePageScenes} save={saveProject} updateSeq={updateCurrentSeq}/>}
+
+      {/* desktop */}
+      {page === 'sequences' && window >= 800 && <Sequences project={project} saved={projectData} updatePage={updatePageScenes} save={saveProject} updateSeq={updateCurrentSeq}/>}
+
+      {page === 'scenes' && <Scenes project={project} s={currentSeq} updatePage={updatePageSequences} text={currentSeq[currentSeq.seqNum]} updateProject={updateProject} addScene={addScenesToSequence} currentSeq={currentSeq} saveProject={saveProject} addSequence={addSequenceToSequences} window={window}/>}
     </section>
   )
 }
