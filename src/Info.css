@@ -1,11 +1,12 @@
 .Info {
   background-color: transparent;
   color:gainsboro;
-  font-size: 24px;
+  font-size: 17px;
   font-weight: 700;
   outline: none;
   border: none;
   grid-column: 5;
   grid-row: 1;
-  align-self: center;
+  align-self: flex-start;
+  padding: 0px;
 }

@@ -1,31 +1,21 @@
 .Edit{
-  position: relative;
   color: var(--main-color);
-  background-color: transparent;
-  padding: 5px 5px 5px 5px;
-  font-size: 1.5rem;
-  border-radius: 6px;
+  background-color:var(--second-bg);
+  box-shadow: 1px 2px 5px var(--main-bg);
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
   grid-row: 3;
-  grid-column: 5;
+  grid-column: 4 / 6; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 150px;
+  gap: 5px;
   cursor: pointer;
-  justify-self: flex-start;
+  justify-self: flex-end;
 }
 
-/* .Edit div {
-  position: relative;
-  grid-column: 2 / span 4;
-  grid-row: 2;
-  background-color: var(--main-bg);
-} */
-
-.Edit p {
-  position: absolute;
-  width: 100px;
-  left: -115px;
-  top: -10px;
-  padding: 10px;
-  padding-right: 50px;
-  border-radius: 10px;
-  border: 2px solid var(--main-color);
-  background-color: transparent;
+.Edit #pen {
+  font-size: 1.3rem;
 }

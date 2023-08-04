@@ -67,7 +67,7 @@ export default function SequenceCard({seq, num, handleChange, project, data, upd
 
       {sample? <Info toggleSample={toggleSample} style={sampleStyle}/> : <Info  toggleSample={toggleSample} />}
 
-      <Edit updatePage={updatePage} updateSeq={updateSeq} data={data} id={seq.id}/>
+      { sample ? <Edit updatePage={updatePage} updateSeq={updateSeq} data={data} id={seq.id} style={sampleStyle}/> : <Edit updatePage={updatePage} updateSeq={updateSeq} data={data} id={seq.id}/>}
 
       {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} num={num} project={project} data={sequenceDataSummary}placeholder={seq.placeHoldSum} />}
 
