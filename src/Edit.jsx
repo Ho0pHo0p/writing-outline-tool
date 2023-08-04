@@ -1,5 +1,5 @@
 import "./Edit.css"
-import { faPen, faPenFancy, faPenToSquare, faPlus, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faPenFancy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Edit({updatePage, updateSeq, data, id}){
@@ -16,6 +16,7 @@ export default function Edit({updatePage, updateSeq, data, id}){
       updatePage()
       
     }}>
+      <p>Add Scenes</p>
       <FontAwesomeIcon icon={faPenFancy} />
     </button>
   )

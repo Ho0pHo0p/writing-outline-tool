@@ -4,7 +4,7 @@
   padding: 20px;
   display: grid;
   grid-template-columns: .25fr repeat(3, 1fr) .25fr;
-  grid-template-rows: 30px 1fr 30px;
+  grid-template-rows: 30px 1fr 40px;
   min-height: 275px;
   gap: 10px 10px;
   align-items: top;
@@ -69,4 +69,16 @@
   outline: none;
   grid-column: 1 / 6;
   grid-row: 2;
+}
+
+.sequenceCard #number {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: transparent;
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  align-self: center;
 }

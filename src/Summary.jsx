@@ -1,5 +1,5 @@
 
-export default function Summary({ placeholder='And then a surprising turn of events...', style, handleChange, num, project, data}){
+export default function Summary({ placeholder, style, handleChange, num, project, data}){
 
   return(
     <>

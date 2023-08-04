@@ -1,6 +1,6 @@
 import "./SequenceCard.css"
 import PlotMarker from "./PlotMarker"
-import Number from "./Number"
+import Info from "./Info"
 import Title from "./Title"
 import SampleTitle from "./SampleTitle"
 import Summary from "./Summary"
@@ -59,17 +59,19 @@ export default function SequenceCard({seq, num, handleChange, project, data, upd
 
   return (
     <section className={`sequenceCard sequenceCard${seq.seqNum}`} style={sample? sampleStyle : defaultStyle}>
+      <p id="number">{num}</p>
+
       {sample? <PlotMarker plotMarker={seq.marker} toggleMarker={toggleMarker} style={sampleStyle} /> : <PlotMarker plotMarker={seq.marker} toggleMarker={toggleMarker}/>}
 
       {marker && <PlotMarkerAlert message={sampleText.markerText} />}
 
-      {sample? <Number num={num} toggleSample={toggleSample} style={sampleStyle}/> : <Number num={num} toggleSample={toggleSample} />}
+      {sample? <Info toggleSample={toggleSample} style={sampleStyle}/> : <Info  toggleSample={toggleSample} />}
 
       <Edit updatePage={updatePage} updateSeq={updateSeq} data={data} id={seq.id}/>
 
-      {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} num={num} project={project} data={sequenceDataSummary} />}
+      {sample? <SampleSummary summary={sampleText.summary} style={sampleStyle}/> : <Summary handleChange={handleChange} num={num} project={project} data={sequenceDataSummary}placeholder={seq.placeHoldSum} />}
 
-      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleChange={handleChange} num={num} data={sequenceDataTitle} project={project} />}
+      {sample ? <SampleTitle title={sampleText.title} sampleOn={sample} style={sampleStyle}/> : <Title handleChange={handleChange} num={num} data={sequenceDataTitle} project={project} placeholder={seq.placeHoldTitle}/>}
     </section>
   )
 }

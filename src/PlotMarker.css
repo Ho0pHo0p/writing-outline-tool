@@ -4,6 +4,6 @@
   font-size: 17px;
   color: var(--accent-color);
   grid-column: 1;
-  grid-row: 1;
+  grid-row: 3;
   align-self: center;
 }

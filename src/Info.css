@@ -1,7 +1,6 @@
-.Number {
+.Info {
   background-color: transparent;
-  color: var(--accent-color);
-  padding: 5px;
+  color:gainsboro;
   font-size: 24px;
   font-weight: 700;
   outline: none;

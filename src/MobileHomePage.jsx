@@ -5,7 +5,7 @@ export default function Home({updatePage, page, updateProject}){
   return(
     <main className="MobileHome">
       <h2>Your Project</h2>
-      <AddProject placeholder={"Title"} updatePage={updatePage} updateProject={updateProject} />
+      <AddProject placeholder={"Screenplay Title"} updatePage={updatePage} updateProject={updateProject} />
     </main>
   )
 }

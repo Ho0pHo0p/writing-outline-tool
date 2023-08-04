@@ -11,8 +11,8 @@ const sequenceArray = [
     numWritten: 'one',
     marker: true,
     markerOn: false,
-    placeHoldSum:'Dorothy is on the farm in Kansas when...', 
-    placeHoldTitle: 'No Place Like Home',
+    placeHoldSum:'Dorothy is on the farm in Kansas when her neighbor threatens her dog Toto...', 
+    placeHoldTitle: 'Home Sweet Home',
     scenes: []
   },
   {
@@ -25,6 +25,8 @@ const sequenceArray = [
     numWritten: 'two',
     marker: true,
     markerOn: false,
+    placeHoldSum:'A Tornado takes Dorothy to a mysterious land...', 
+    placeHoldTitle: 'Tornado',
     scenes: []
   },
   {
@@ -37,6 +39,8 @@ const sequenceArray = [
     numWritten: 'three',
     marker: false,
     markerOn: false,
+    placeHoldSum:'Dorothy lands in Oz and meets Glinda the Good Witch...', 
+    placeHoldTitle: 'Not in Kansas Anymore',
     scenes: []
   },
   {
@@ -49,6 +53,8 @@ const sequenceArray = [
     numWritten: 'four',
     marker: true,
     markerOn: false,
+    placeHoldSum:'Dorothy sets off on her journey to find the Wizard of Oz and return home...', 
+    placeHoldTitle: 'On the Yellow Brick Road',
     scenes: []
   },
   {
@@ -61,6 +67,8 @@ const sequenceArray = [
     numWritten: 'five',
     marker: false,
     markerOn: false,
+    placeHoldSum:'Dorothy, and friends, are tested as their journey brings them to the castle of the Wicked Witch...', 
+    placeHoldTitle: 'Flying Monkeys, oh My!',
     scenes: []
   },
   {
@@ -73,6 +81,8 @@ const sequenceArray = [
     numWritten: 'six',
     marker: true,
     markerOn: false,
+    placeHoldSum:'Dorothy is forced to choose between Toto and the magic slippers...', 
+    placeHoldTitle: 'She`s Melting',
     scenes: []
   },
   {
@@ -85,6 +95,8 @@ const sequenceArray = [
     numWritten: 'seven',
     marker: true,
     markerOn: false,
+    placeHoldSum:'Dorothy finally meets the Wizard, but can he help her get home?...', 
+    placeHoldTitle: 'Off to See the Wizard',
     scenes: []
   },
   {
@@ -97,6 +109,8 @@ const sequenceArray = [
     numWritten: 'eight',
     marker: false,
     markerOn: false,
+    placeHoldSum:'Dorothy wakes up in her bed in Kansas...', 
+    placeHoldTitle: 'There is No Place Like Home',
     scenes: []
   }
 ]

@@ -1,5 +1,5 @@
 
-export default function Title({placeholder='Title', style, num, project, handleChange, data}){
+export default function Title({placeholder, style, num, project, handleChange, data}){
 
   return(
     <>

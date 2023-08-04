@@ -1,6 +1,6 @@
 .PlotMarkerAlert p {
   position: absolute;
-  top: -60px;
+  top: 150px;
   padding: 7px;
   line-height: 1.3;
   text-align: center;
@@ -13,7 +13,7 @@
 
 .PlotMarkerAlert {
   position: relative;
-  grid-row: 2;
+  grid-row: 2 / 3;
   grid-column: 2 / 4; 
   color: var(--accent-color);
 }

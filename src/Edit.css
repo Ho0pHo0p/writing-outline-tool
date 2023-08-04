@@ -1,6 +1,6 @@
 .Edit{
   position: relative;
-  color: var(--main-bg);
+  color: var(--main-color);
   background-color: transparent;
   padding: 5px 5px 5px 5px;
   font-size: 1.5rem;
@@ -21,11 +21,11 @@
 .Edit p {
   position: absolute;
   width: 100px;
-  left: -120px;
-  top: -22px;
+  left: -115px;
+  top: -10px;
   padding: 10px;
-  padding-right: 55px;
+  padding-right: 50px;
   border-radius: 10px;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--main-color);
   background-color: transparent;
 }
