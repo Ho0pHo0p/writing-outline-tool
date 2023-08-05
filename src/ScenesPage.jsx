@@ -6,7 +6,7 @@ import Scenes from "./Scenes";
 import MobileScenes from "./MobileScenes"
 
 export default function ScenesPage({s, text, currentSeq, updatePage, updateProject, addScene, project, saveProject, addSequence, window}){
-  let titleOn = currentSeq.title ? true : false;
+
 
   return(
     <main className="ScenesPage">
