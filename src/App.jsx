@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 function App() {
  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
+
  useEffect(()=> {
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth)
@@ -13,7 +14,6 @@ function App() {
 
   window.addEventListener('resize', handleWindowResize);
 
-  console.log(windowWidth)
   return () => {
     window.removeEventListener('resize', handleWindowResize)
   }
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Header />
-      <Body window={windowWidth}/>
+      <Body window={windowWidth} />
     </>
   )
 }

@@ -1,7 +1,6 @@
 import SequenceCard from "./SequenceCard"
 import "./MobileSequencesPage.css"
 import ProjectName from "./ProjectName";
-import SaveButton from "./SaveButton";
 import { useState } from "react"
 import { filterArray, filterSegment } from "./utils";
 

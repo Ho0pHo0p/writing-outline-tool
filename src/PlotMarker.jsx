@@ -5,7 +5,7 @@ import { faThumbTack } from '@fortawesome/free-solid-svg-icons'
 export default function PlotMarker({plotMarker, toggleMarker, style}){
   return(
     <>
-      {plotMarker === true && <FontAwesomeIcon className="Marker" icon={faThumbTack} onMouseEnter={toggleMarker} onMouseLeave={toggleMarker}  onClicke={toggleMarker} style={style}/>}
+      {plotMarker === true && <FontAwesomeIcon className="Marker" icon={faThumbTack} onMouseEnter={toggleMarker} onMouseLeave={toggleMarker}  onClick={toggleMarker} style={style}/>}
     </>
   )
 }

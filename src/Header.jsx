@@ -6,7 +6,7 @@ export default function Header(){
 
   return (
     <header className="header">
-      <h1 onClick={refresh}>8 Sequences</h1>
+      <h1>8 Sequences</h1>
     </header>
   )
 }

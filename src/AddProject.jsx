@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid'
 import { useState } from "react"
 import { sequenceArray } from "./sequenceData"
 
-export default function AddProject({placeholder, updatePage, updateProject}){
+export default function AddProject({placeholder, updatePage, updateProject, project}){
   const [formData, setFormData] = useState({
     project: "",
     id: "",
@@ -23,9 +23,8 @@ export default function AddProject({placeholder, updatePage, updateProject}){
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault
+    e.preventDefault();
     updateProject(formData);
-    setFormData({project:"", id:"", sequences: [...sequenceArray]});
     updatePage();
   }
 
