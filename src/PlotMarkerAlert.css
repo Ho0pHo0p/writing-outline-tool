@@ -1,6 +1,7 @@
 .PlotMarkerAlert p {
   position: absolute;
   top: 150px;
+  min-width: 100px;
   padding: 7px;
   line-height: 1.3;
   text-align: center;
