@@ -24,7 +24,6 @@ export default function Sequences({project, updatePage, save, updateSeq}){
     <main className="sequencesMobile">
       <form>
         <ProjectName project={project} on={false}/>
-          <SaveButton save={save} data={formData}/>
           {seqData.map((s) => (
             <SequenceCard key={s.id} num={s.seqNum} seq={s} handleChange={handleChange} project={project} data={formData} updatePage={updatePage} updateSeq={updateSeq} />
           ))}

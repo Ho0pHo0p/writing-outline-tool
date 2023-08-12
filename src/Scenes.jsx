@@ -2,8 +2,6 @@ import AddScene from "./AddScene"
 import SceneCard from "./SceneCard";
 import "./Scenes.css"
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import FilterMenu from "./FilterMenu";
 
 export default function Scenes({addScene, currentSeq}){

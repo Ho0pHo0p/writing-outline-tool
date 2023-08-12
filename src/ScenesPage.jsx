@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SequenceTitleCard from "./SequenceTitleCard";
 import "./ScenesPage.css"
 import ProjectName from "./ProjectName";
@@ -28,7 +27,7 @@ export default function ScenesPage({s, text, currentSeq, updatePage, updateProje
       
       <SequenceTitleCard title={title} summary={summary} seq={s} />
 
-      {window < 800 ? <MobileScenes addScene={addScene} currentSeq={currentSeq}/> :<Scenes addScene={addScene} currentSeq={currentSeq}/>}
+      {window < 800 ? <MobileScenes addScene={addScene} currentSeq={currentSeq} /> :<Scenes addScene={addScene} currentSeq={currentSeq} />}
     </main>
   )
 }
